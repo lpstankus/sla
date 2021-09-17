@@ -337,12 +337,13 @@ call s:hi('vimEmbedError', s:fg0, 'none', 'italic')
 " }}}
 " Zig: {{{
 
-hi! link zigVarDecl   fg1
+hi! link zigMacro     fg1
 hi! link zigBuiltinFn gre0
-hi! link zigMacro     red1
+hi! link zigExecution red0
 hi! link zigKeyword   red0
-call s:hi('zigExecution', s:fg1,  'none', 'italic')
-call s:hi('zigKeyword',   s:red0, 'none', 'bold'  )
+hi! link zigVarDecl   red0
+hi! link zigMacro     red2
+hi! link zigPreProc   red2
 
 " }}}
 
