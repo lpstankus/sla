@@ -19,10 +19,12 @@ endfunction
 let s:bg0  = '#00161d'
 let s:bg1  = '#052029'
 let s:bg2  = '#122b34'
+let s:bg3  = '#031b23'
 let s:fg0  = '#d1b896'
 let s:fg1  = '#e8dccb'
 let s:gra0 = '#667377'
 let s:gra1 = '#33454a'
+let s:blu0 = '#7aa6ff'
 let s:gre0 = '#8cde94'
 let s:gre1 = '#2ec09c'
 let s:gre2 = '#7ad0c6'
@@ -43,6 +45,7 @@ call s:hi('fg0',  s:fg0 )
 call s:hi('fg1',  s:fg1 )
 call s:hi('gra0', s:gra0)
 call s:hi('gra1', s:gra1)
+call s:hi('blu0', s:blu0)
 call s:hi('gre0', s:gre0)
 call s:hi('gre1', s:gre1)
 call s:hi('gre2', s:gre2)
