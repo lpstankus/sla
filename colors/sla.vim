@@ -334,6 +334,7 @@ hi! link vimSep          fg1
 hi! link vimSet          fg1
 hi! link vimSetEqual     fg1
 hi! link vimSetSep       fg1
+hi! link vimUserFunc     fg1
 hi! link vimCommentTitle red0
 call s:hi('vimEmbedError', s:fg0, 'none', 'italic')
 
