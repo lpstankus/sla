@@ -83,7 +83,7 @@ call s:hi('PmenuSel',   s:bg1,  s:fg0)
 call s:hi('PmenuSbar',  'none', s:bg2)
 call s:hi('PmenuThumb', 'none', s:fg0)
 
-call s:hi('VertSplit',    s:bg0, s:bg1)
+call s:hi('WinSeparator', s:fg0, s:bg0)
 call s:hi('StatusLine',   s:bg0, s:fg0)
 call s:hi('StatusLineNC', s:fg0, s:bg1)
 call s:hi('TabLine',      s:fg0, s:bg1)
