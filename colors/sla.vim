@@ -299,6 +299,17 @@ hi! link rubySymbol           red1
 call s:hi('rubyClassVariable', s:gre0, 'none', 'bold')
 
 " }}}
+" Rust: {{{
+
+hi! link rustMacro         fg1
+hi! link rustSigil         fg1
+hi! link rustModPath       red0
+hi! link rustStorage       red0
+hi! link rustMacroVariable red2
+hi! link rustModSep        red2
+hi! link rustSelf          red2
+
+" }}}
 " Typescript: {{{
 
 hi! link typescriptCall                  fg0
