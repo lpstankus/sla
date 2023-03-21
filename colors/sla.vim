@@ -21,7 +21,8 @@ let s:bg1  = '#052029'
 let s:bg2  = '#122b34'
 let s:bg3  = '#031b23'
 let s:fg0  = '#d1b896'
-let s:fg1  = '#e8dccb'
+let s:fg1  = '#f1eae0'
+let s:fg2  = '#e4d5c2'
 let s:gra0 = '#667377'
 let s:gra1 = '#33454a'
 let s:blu0 = '#7aa6ff'
@@ -43,6 +44,7 @@ let s:rem = '#ff3333'
 " Color hi groups
 call s:hi('fg0',  s:fg0 )
 call s:hi('fg1',  s:fg1 )
+call s:hi('fg2',  s:fg2 )
 call s:hi('gra0', s:gra0)
 call s:hi('gra1', s:gra1)
 call s:hi('blu0', s:blu0)
@@ -61,7 +63,10 @@ call s:hi('na', '#ff00ff')
 
 " User Interface: {{{
 
-call s:hi('Normal', s:fg0, s:bg0)
+call s:hi('Normal',    s:fg0, s:bg0)
+call s:hi('Emph',      s:fg0, 'none', 'italic')
+call s:hi('Underline', s:fg0, 'none', 'underline')
+call s:hi('Strike',    s:fg0, 'none', 'strikethrough')
 
 call s:hi('Cursor',       s:bg0,  s:gre1)
 call s:hi('CursorLine',   'none', s:bg1)
@@ -365,55 +370,53 @@ hi! link zigPreProc   red2
 " }}}
 " Tree Sitter: {{{
 
-hi! link TSText    fg0
-hi! link TSError   Error
-hi! link TSComment Comment
+hi! link @none                  na
+hi! link @text                  fg0
+hi! link @text.emphasis         Emph
+hi! link @text.strike           Strike
+hi! link @text.underline        Underline
+hi! link @text.diff.add         DiffAdd
+hi! link @text.diff.delete      DiffDelete
 
-hi! link TSConstant     Constant
-hi! link TSConstMacro   Constant
-hi! link TSConstBuiltin Constant
+hi! link @type                  red1
+hi! link @type.wgsl             red1
+hi! link @type.qualifier        red0
 
-hi! link TSString       String
-hi! link TSStringRegex  String
-hi! link TSStringEscape Character
+hi! link @label                 red2
+hi! link @namespace             red0
 
-hi! link TSCharacter Character
-hi! link TSNumber    Number
-hi! link TSBoolean   Boolean
-hi! link TSFloat     Float
+hi! link @keyword               red0
+hi! link @keyword.operator      fg1
 
-hi! link TSConditional Conditional
-hi! link TSRepeat      Repeat
-hi! link TSLabel       Label
-hi! link TSOperator    Operator
+hi! link @field                 fg0
+hi! link @property              fg0
 
-hi! link TSMethod      Function
-hi! link TSFunction    Function
-hi! link TSFuncMacro   Function
-hi! link TSFuncBuiltin Function
-hi! link TSConstructor Function
+hi! link @storageclass          red0
+hi! link @storageclass.lifetime red2
 
-hi! link TSField              fg0
-hi! link TSProperty           fg0
-hi! link TSParameter          fg0
-hi! link TSParameterReference fg0
-hi! link TSVariable           fg0
-hi! link TSVariableBuiltin    red2
+hi! link @function              fg1
+hi! link @function.builtin      gre0
+hi! link @parameter             fg0
 
-hi! link TSType            Type
-hi! link TSTypeBuiltin     Type
-hi! link TSTag             Keyword
-hi! link TSTagDelimiter    Delimiter
-hi! link TSKeyword         Keyword
-hi! link TSKeywordFunction Keyword
+hi! link @variable              fg0
+hi! link @variable.builtin      fg1
+hi! link @variable.builtin.rust red2
 
-hi! link TSInclude   Include
-hi! link TSException Exception
-hi! link TSNamespace Keyword
+hi! link @constant              gre2
+hi! link @constant.builtin      gre2
 
-hi! link TSPunctBracket   fg0
-hi! link TSPunctSpecial   Delimeter
-hi! link TSPunctDelimiter Delimeter
+hi! link @include               gre0
+hi! link @include.rust          red0
+hi! link @attribute             red0
+
+hi! link @operator              fg1
+hi! link @conditional.ternary   fg1
+
+hi! link @punctuation              fg0
+hi! link @punctuation.bracket      fg2
+hi! link @punctuation.special      fg1
+hi! link @punctuation.special.rust gre0
+
 
 " }}}
 " Plugins Hi Groups: {{{
