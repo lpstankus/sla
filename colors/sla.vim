@@ -16,30 +16,32 @@ endfunction
 " }}}
 " Memoization And Variables: {{{
 
-let s:bg0  = '#00161d'
+let s:bg0  = '#00161D'
 let s:bg1  = '#052029'
-let s:bg2  = '#122b34'
-let s:bg3  = '#031b23'
-let s:fg0  = '#d1b896'
-let s:fg1  = '#f1eae0'
-let s:fg2  = '#e4d5c2'
+let s:bg2  = '#122B34'
+let s:bg3  = '#031B23'
+let s:fg0  = '#D1B896'
+let s:fg1  = '#F1EAE0'
+let s:fg2  = '#E4D5C2'
 let s:gra0 = '#667377'
-let s:gra1 = '#33454a'
-let s:blu0 = '#7aa6ff'
-let s:gre0 = '#8cde94'
-let s:gre1 = '#2ec09c'
-let s:gre2 = '#7ad0c6'
-let s:red0 = '#c03b3b'
-let s:red1 = '#bf616a'
-let s:red2 = '#d0675b'
+let s:gra1 = '#33454A'
+let s:blu0 = '#7AA6FF'
+let s:gre0 = '#8CDE94'
+let s:gre1 = '#2EC09C'
+let s:gre2 = '#7AD0C6'
+let s:red0 = '#C03B3B'
+let s:red1 = '#BF616A'
+let s:red2 = '#D0675B'
 
-let s:err = '#aa0000'
-let s:war = '#ffcc66'
-let s:suc = '#99ff99'
+let s:err = '#AA0000'
+let s:war = '#FFCC66'
+let s:suc = '#A0DD80'
+let s:hin = '#FFF0D0'
+let s:id  = '#BDD3FF'
 
-let s:add = '#b8cc52'
-let s:mod = '#59c2ff'
-let s:rem = '#ff3333'
+let s:add = '#B8CC52'
+let s:mod = '#59C2FF'
+let s:rem = '#FF3333'
 
 " Color hi groups
 call s:hi('fg0',  s:fg0 )
@@ -201,6 +203,12 @@ hi! link Ignore gra0
 call s:hi('Underlined', s:gre2, 'none', 'underline')
 call s:hi('Error', s:bg0, s:err)
 call s:hi('Todo', s:gre0, 'none', 'bold')
+
+call s:hi('DiagnosticError', s:err, 'none')
+call s:hi('DiagnosticWarn',  s:war, 'none')
+call s:hi('DiagnosticInfo',  s:suc, 'none')
+call s:hi('DiagnosticHint',  s:hin, 'none')
+call s:hi('Identifier',      s:id,  'none')
 
 " }}}
 
