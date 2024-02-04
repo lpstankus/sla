@@ -196,12 +196,10 @@ hi! link Delimiter      fg1
 hi! link SpecialComment red0
 hi! link Debug          red1
 
-call s:hi('Underlined', s:gre2, 'none', 'underline')
-
 hi! link Ignore gra0
 
-call s:hi('Error', s:fg1, s:err)
-
+call s:hi('Underlined', s:gre2, 'none', 'underline')
+call s:hi('Error', s:bg0, s:err)
 call s:hi('Todo', s:gre0, 'none', 'bold')
 
 " }}}
@@ -378,29 +376,34 @@ hi! link @text.underline        Underline
 hi! link @text.diff.add         DiffAdd
 hi! link @text.diff.delete      DiffDelete
 
+hi! link @variable              fg0
+hi! link @variable.builtin      fg1
+hi! link @variable.builtin.rust red2
+
 hi! link @type                  red1
 hi! link @type.wgsl             red1
 hi! link @type.qualifier        red0
 
-hi! link @label                 red2
+hi! link @exception             red0
 hi! link @namespace             red0
+hi! link @label                 red2
 
 hi! link @keyword               red0
 hi! link @keyword.operator      fg1
 
+hi! link @operator              fg1
+hi! link @conditional.ternary   fg1
+
 hi! link @field                 fg0
 hi! link @property              fg0
-
-hi! link @storageclass          red0
-hi! link @storageclass.lifetime red2
-
-hi! link @function              fg1
-hi! link @function.builtin      gre0
 hi! link @parameter             fg0
 
-hi! link @variable              fg0
-hi! link @variable.builtin      fg1
-hi! link @variable.builtin.rust red2
+hi! link @function              fg1
+" hi! link @function.builtin      gre0
+
+hi! link @storageclass          red0
+hi! link @storageclass.zig      red1
+hi! link @storageclass.lifetime red2
 
 hi! link @constant              gre2
 hi! link @constant.builtin      gre2
@@ -409,14 +412,10 @@ hi! link @include               gre0
 hi! link @include.rust          red0
 hi! link @attribute             red0
 
-hi! link @operator              fg1
-hi! link @conditional.ternary   fg1
-
 hi! link @punctuation              fg0
 hi! link @punctuation.bracket      fg2
 hi! link @punctuation.special      fg1
 hi! link @punctuation.special.rust gre0
-
 
 " }}}
 " Plugins Hi Groups: {{{
