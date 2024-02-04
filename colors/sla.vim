@@ -131,29 +131,29 @@ call s:hi('healthWarning', s:bg0, s:war)
 call s:hi('healthSuccess', s:bg0, s:suc)
 
 if has('nvim')
-  let g:terminal_color_0 = s:gra1
-  let g:terminal_color_8 = s:gra0
+  let g:terminal_color_0  = '#131415'
+  let g:terminal_color_8  = '#131415'
 
-  let g:terminal_color_1 = s:red0
-  let g:terminal_color_9 = s:red1
+  let g:terminal_color_1  = '#C03B3B'
+  let g:terminal_color_9  = '#C03B3B'
 
-  let g:terminal_color_2 = s:gre1
-  let g:terminal_color_10 = s:gre0
+  let g:terminal_color_2  = '#2EC09C'
+  let g:terminal_color_10 = '#2EC09C'
 
-  " let g:terminal_color_3 = s:gb.neutral_yellow[0]
-  " let g:terminal_color_11 = s:yellow[0]
+  let g:terminal_color_3  = '#E7C547'
+  let g:terminal_color_11 = '#E7C547'
 
-  " let g:terminal_color_4 = s:gb.neutral_blue[0]
-  " let g:terminal_color_12 = s:blue[0]
+  let g:terminal_color_4  = '#7AA6FF'
+  let g:terminal_color_12 = '#7AA6FF'
 
-  " let g:terminal_color_5 = s:gb.neutral_purple[0]
-  " let g:terminal_color_13 = s:purple[0]
+  let g:terminal_color_5  = '#D4BFFF'
+  let g:terminal_color_13 = '#D4BFFF'
 
-  " let g:terminal_color_6 = s:gb.neutral_aqua[0]
-  " let g:terminal_color_14 = s:aqua[0]
+  let g:terminal_color_6  = '#7AD0C6'
+  let g:terminal_color_14 = '#7AD0C6'
 
-  let g:terminal_color_7 = s:fg0
-  let g:terminal_color_15 = s:fg1
+  let g:terminal_color_7  = '#E8DCCB'
+  let g:terminal_color_15 = '#E8DCCB'
 endif
 
 " }}}
