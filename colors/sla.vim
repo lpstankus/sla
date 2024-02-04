@@ -428,21 +428,6 @@ hi! link @punctuation.special.rust gre0
 " }}}
 " Plugins Hi Groups: {{{
 
-" GitCommit
-" hi gitcommitSelectedFile  guifg=#a3be8c guibg=NONE gui=NONE cterm=NONE
-" hi gitcommitDiscardedFile guifg=#bf616a guibg=NONE gui=NONE cterm=NONE
-" hi gitcommitUntrackedFile guifg=#bf616a guibg=NONE gui=NONE cterm=NONE
-
-" NeoVim LSP
-" hi! link LspDiagnosticsDefaultError         lsp_err
-" hi! link LspDiagnosticsUnderlineError       lsp_err
-" hi! link LspDiagnosticsHint                 lsp_hin
-" hi! link LspDiagnosticsUnderlineHint        lsp_hin
-" hi! link LspDiagnosticsInformation          lsp_inf
-" hi! link LspDiagnosticsUnderlineInformation lsp_inf
-" hi! link LSPDiagnosticsWarning              lsp_war
-" hi! link LspDiagnosticsUnderlineWarning     lsp_war
-
 " Signify
 call s:hi('SignifySignAdd',             s:add, s:bg1)
 call s:hi('SignifySignChange',          s:mod, s:bg1)
@@ -462,5 +447,9 @@ call s:hi('GitGutterAddLineNr',          s:add, s:bg0)
 call s:hi('GitGutterChangeLineNr',       s:mod, s:bg0)
 call s:hi('GitGutterDeleteLineNr',       s:rem, s:bg0)
 call s:hi('GitGutterChangeDeleteLineNr', s:rem, s:bg0)
+
+" Indent blankline
+hi! link IblIndent gra1
+hi! link iblScope  red0
 
 " }}}
