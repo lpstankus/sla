@@ -132,6 +132,8 @@ call s:hi('healthError',   s:bg0, s:err)
 call s:hi('healthWarning', s:bg0, s:war)
 call s:hi('healthSuccess', s:bg0, s:suc)
 
+hi! link FloatBorder fg0
+
 if has('nvim')
   let g:terminal_color_0  = '#131415'
   let g:terminal_color_8  = '#131415'
