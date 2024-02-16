@@ -172,7 +172,7 @@ hi! link Number    gre2
 hi! link Boolean   gre2
 hi! link Float     gre2
 
-hi! link Identifier red1
+hi! link Identifier fg0
 hi! link Function   fg1
 
 hi! link Statement   red0
@@ -376,6 +376,22 @@ hi! link zigPreProc   red2
 " }}}
 
 " }}}
+" LSP: {{{
+
+hi! link @lsp.type.enum      red1
+hi! link @lsp.type.struct    red1
+
+hi! link @lsp.type.variable  fg0
+hi! link @lsp.type.parameter fg0
+hi! link @lsp.type.property  fg2
+
+hi! link @lsp.keyword        red0
+hi! link @lsp.keyword.import gre0
+
+hi! link @lsp.type.namespace     gre0
+hi! link @lsp.type.namespace.zig fg0
+
+" }}}
 " Tree Sitter: {{{
 
 hi! link @none                  na
@@ -399,6 +415,7 @@ hi! link @namespace             red0
 hi! link @label                 red2
 
 hi! link @keyword               red0
+hi! link @keyword.import        gre0
 hi! link @keyword.operator      fg1
 
 hi! link @operator              fg1
@@ -409,7 +426,8 @@ hi! link @property              fg0
 hi! link @parameter             fg0
 
 hi! link @function              fg1
-" hi! link @function.builtin      gre0
+call s:hi("@function.builtin", s:fg1, "none", "italic")
+" hi! link @function.builtin     gre0
 
 hi! link @storageclass          red0
 hi! link @storageclass.zig      red1
