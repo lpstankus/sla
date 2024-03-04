@@ -388,8 +388,9 @@ hi! link @lsp.type.property  fg2
 hi! link @lsp.keyword        red0
 hi! link @lsp.keyword.import gre0
 
-hi! link @lsp.type.namespace     gre0
-hi! link @lsp.type.namespace.zig fg0
+hi! link @lsp.type.namespace      gre0
+hi! link @lsp.type.namespace.rust fg0
+hi! link @lsp.type.namespace.zig  fg0
 
 " }}}
 " Tree Sitter: {{{
@@ -416,6 +417,7 @@ hi! link @label                 red2
 
 hi! link @keyword               red0
 hi! link @keyword.import        gre0
+hi! link @keyword.import.rust   red0
 hi! link @keyword.operator      fg1
 
 hi! link @operator              fg1
@@ -471,5 +473,40 @@ call s:hi('GitGutterChangeDeleteLineNr', s:rem, s:bg0)
 " Indent blankline
 hi! link IblIndent gra1
 hi! link iblScope  red0
+
+" CmpItem
+call s:hi('CmpItemKindText', s:bg0, s:fg0, 'bold')
+hi! link CmpItemKindModule        CmpItemKindText
+hi! link CmpItemKindVariable      CmpItemKindText
+hi! link CmpItemKindTypeParameter CmpItemKindText
+
+call s:hi('CmpItemKindFunction', s:bg0, s:fg1, 'bold')
+hi! link CmpItemKindOperator    CmpItemKindFunction
+hi! link CmpItemKindConstructor CmpItemKindFunction
+hi! link CmpItemKindMethod      CmpItemKindFunction
+hi! link CmpItemKindInterface   CmpItemKindFunction
+
+call s:hi('CmpItemKindField', s:bg0, s:fg2, 'bold')
+hi! link CmpItemKindProperty CmpItemKindField
+hi! link CmpItemKindFile     CmpItemKindField
+hi! link CmpItemKindFolder   CmpItemKindField
+
+call s:hi('CmpItemKindConstant', s:bg0, s:gre2, 'bold')
+hi! link CmpItemKindValue      CmpItemKindConstant
+hi! link CmpItemKindEnumMember CmpItemKindConstant
+
+call s:hi('CmpItemKindKeyword', s:bg0, s:red0, 'bold')
+hi! link CmpItemKindEnum CmpItemKindKeyword
+
+call s:hi('CmpItemKindStruct', s:bg0, s:red1, 'bold')
+hi! link CmpItemKindClass CmpItemKindStruct
+
+call s:hi('CmpItemKindEvent', s:bg0, s:gre0, 'bold')
+hi! link CmpItemKindUnit      CmpItemKindEvent
+hi! link CmpItemKindColor     CmpItemKindEvent
+hi! link CmpItemKindReference CmpItemKindEvent
+
+call s:hi('CmpItemKindSnippet', s:bg0, s:blu0, 'bold')
+hi! link CmpItemKindCopilot CmpItemKindSnippet
 
 " }}}
