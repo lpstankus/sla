@@ -509,4 +509,14 @@ hi! link CmpItemKindReference CmpItemKindEvent
 call s:hi('CmpItemKindSnippet', s:bg0, s:blu0, 'bold')
 hi! link CmpItemKindCopilot CmpItemKindSnippet
 
+" Noice
+hi! link NoiceCmdlinePopup  Normal
+hi! link NoiceCmdlinePrompt Normal
+hi! link NoiceCmdline       Normal
+hi! link NoiceCmdlineIcon   Normal
+hi! link NoiceCmdlinePopupTitle  Normal
+hi! link NoiceCmdlinePopupBorder Normal
+hi! link NoiceCmdlineIconSearch  Normal
+hi! link NoiceCmdlinePopupBorderSearch Normal
+
 " }}}
