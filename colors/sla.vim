@@ -395,7 +395,7 @@ hi! link @lsp.type.namespace.zig  fg0
 " }}}
 " Tree Sitter: {{{
 
-hi! link @none                  na
+hi! link @none                  fg0
 hi! link @text                  fg0
 hi! link @text.emphasis         Emph
 hi! link @text.strike           Strike
