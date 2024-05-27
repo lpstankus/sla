@@ -33,11 +33,12 @@ let s:red0 = '#C03B3B'
 let s:red1 = '#BF616A'
 let s:red2 = '#D0675B'
 
+let s:id  = '#BDD3FF'
 let s:err = '#AA0000'
 let s:war = '#FFCC66'
 let s:suc = '#A0DD80'
 let s:hin = '#FFF0D0'
-let s:id  = '#BDD3FF'
+let s:oka = s:suc
 
 let s:add = '#B8CC52'
 let s:mod = '#59C2FF'
@@ -205,12 +206,19 @@ hi! link Ignore gra0
 call s:hi('Underlined', s:gre2, 'none', 'underline')
 call s:hi('Error', s:bg0, s:err)
 call s:hi('Todo', s:gre0, 'none', 'bold')
+call s:hi('Identifier', s:id, 'none')
 
 call s:hi('DiagnosticError', s:err, 'none')
 call s:hi('DiagnosticWarn',  s:war, 'none')
 call s:hi('DiagnosticInfo',  s:suc, 'none')
 call s:hi('DiagnosticHint',  s:hin, 'none')
-call s:hi('Identifier',      s:id,  'none')
+call s:hi('DiagnosticOk',    s:oka, 'none')
+
+exec "hi! DiagnosticUnderlineError gui=undercurl guisp=" . s:err
+exec "hi! DiagnosticUnderlineInfo  gui=undercurl guisp=" . s:war
+exec "hi! DiagnosticUnderlineWarn  gui=undercurl guisp=" . s:suc
+exec "hi! DiagnosticUnderlineHint  gui=undercurl guisp=" . s:hin
+exec "hi! DiagnosticUnderlineOk    gui=undercurl guisp=" . s:oka
 
 " }}}
 
