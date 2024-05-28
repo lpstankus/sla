@@ -527,4 +527,40 @@ hi! link NoiceCmdlinePopupBorder Normal
 hi! link NoiceCmdlineIconSearch  Normal
 hi! link NoiceCmdlinePopupBorderSearch Normal
 
+" Neogit
+call s:hi('NeogitBranch',     s:fg1,  'none', 'bold'       )
+call s:hi('NeogitBranchHead', s:fg1,  'none', 'bold'       )
+call s:hi('NeogitRemote',     s:red1, 'none', 'bold,italic')
+call s:hi('NeogitStash',      s:red1, 'none', 'bold'       )
+call s:hi('NeogitObjectId', s:gra0)
+call s:hi('NeogitFold',     s:fg1 )
+
+call s:hi('NeogitSectionHeader',      s:red0)
+call s:hi('NeogitSectionHeaderCount', s:fg2 )
+
+call s:hi('NeogitChangeModified', s:fg2,  'none', 'italic,bold')
+call s:hi('NeogitChangeAdded',    s:fg2,  'none', 'italic,bold')
+call s:hi('NeogitChangeDeleted',  s:red2, 'none', 'italic,bold')
+call s:hi('NeogitChangeRenamed',  s:fg2,  'none', 'italic,bold')
+call s:hi('NeogitChangeUpdated',  s:fg2,  'none', 'italic,bold')
+call s:hi('NeogitChangeCopied',   s:fg2,  'none', 'italic,bold')
+call s:hi('NeogitChangeNewFile',  s:fg2,  'none', 'italic,bold')
+call s:hi('NeogitChangeUnmerged', s:red2, 'none', 'italic,bold')
+
+call s:hi('NeogitDiffHeader',  s:fg1, s:bg0,  'bold')
+call s:hi('NeogitHunkHeader',  s:bg0, s:gra1, 'bold')
+call s:hi('NeogitDiffContext', s:fg0, s:bg3         )
+call s:hi('NeogitDiffAdd',     s:add, s:bg3         )
+call s:hi('NeogitDiffDelete',  s:rem, s:bg3         )
+
+call s:hi('NeogitHunkHeaderHighlight',  s:bg0, s:fg0, 'bold')
+call s:hi('NeogitDiffContextHighlight', s:fg0, s:bg3        )
+call s:hi('NeogitDiffAddHighlight',     s:add, s:bg3        )
+call s:hi('NeogitDiffDeleteHighlight',  s:rem, s:bg3        )
+call s:hi('NeogitDiffHeaderCursor',     s:fg1, s:bg2, 'bold')
+call s:hi('NeogitHunkHeaderCursor',     s:bg0, s:fg2, 'bold')
+call s:hi('NeogitDiffContextCursor',    s:fg0, s:bg0        )
+call s:hi('NeogitDiffAddCursor',        s:add, s:bg0        )
+call s:hi('NeogitDiffDeleteCursor',     s:rem, s:bg0        )
+
 " }}}
