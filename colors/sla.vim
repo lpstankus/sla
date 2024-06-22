@@ -43,6 +43,7 @@ let s:oka = s:suc
 let s:add = '#B8CC52'
 let s:mod = '#59C2FF'
 let s:rem = '#FF3333'
+let s:unt = s:war
 
 " Color hi groups
 call s:hi('fg0',  s:fg0 )
@@ -562,5 +563,13 @@ call s:hi('NeogitHunkHeaderCursor',     s:bg0, s:fg2, 'bold')
 call s:hi('NeogitDiffContextCursor',    s:fg0, s:bg0        )
 call s:hi('NeogitDiffAddCursor',        s:add, s:bg0        )
 call s:hi('NeogitDiffDeleteCursor',     s:rem, s:bg0        )
+
+" Gitsigns
+call s:hi('GitSignsAdd',          s:add, s:bg1)
+call s:hi('GitSignsChange',       s:mod, s:bg1)
+call s:hi('GitSignsChangeDelete', s:mod, s:bg1)
+call s:hi('GitSignsDelete',       s:rem, s:bg1)
+call s:hi('GitSignsTopDelete',    s:rem, s:bg1)
+call s:hi('GitSignsUntracked',    s:unt, s:bg1)
 
 " }}}
