@@ -134,6 +134,7 @@ call s:hi('healthError',   s:bg0, s:err)
 call s:hi('healthWarning', s:bg0, s:war)
 call s:hi('healthSuccess', s:bg0, s:suc)
 
+call s:hi('NormalFloat', 'none', s:bg0)
 hi! link FloatBorder fg0
 
 if has('nvim')
