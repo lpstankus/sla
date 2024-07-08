@@ -397,6 +397,7 @@ hi! link @lsp.type.property  fg2
 hi! link @lsp.keyword        red0
 hi! link @lsp.keyword.import gre0
 
+hi! link @lsp.type.macro          gre0
 hi! link @lsp.type.namespace      gre0
 hi! link @lsp.type.namespace.rust fg0
 hi! link @lsp.type.namespace.zig  fg0
@@ -419,6 +420,7 @@ hi! link @variable.builtin.rust red2
 hi! link @type                  red1
 hi! link @type.wgsl             red1
 hi! link @type.qualifier        red0
+hi! link @type.builtin          red1
 
 hi! link @exception             red0
 hi! link @namespace             red0
@@ -428,6 +430,7 @@ hi! link @keyword               red0
 hi! link @keyword.import        gre0
 hi! link @keyword.import.rust   red0
 hi! link @keyword.operator      fg1
+hi! link @keyword.operator.cpp  red0
 
 hi! link @operator              fg1
 hi! link @conditional.ternary   fg1
